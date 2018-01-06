@@ -1,0 +1,19 @@
+{
+  "name": "payplus/payplus-prestashop",
+  "description": "PrestaShop module PayPlus",
+  "homepage": "https://github.com/payplus/payplus-prestashop-1.7",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PayPlus",
+      "email": "info@payplus.africa"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "type": "prestashop-module"
+}

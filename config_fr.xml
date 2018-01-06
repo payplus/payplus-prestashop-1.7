@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>payplus</name>
+    <displayName><![CDATA[PayPlus]]></displayName>
+    <version><![CDATA[0.1]]></version>
+    <description><![CDATA[Acceptez facilement des paiements via Mtn mobile money et Moov money sur votre site Prestashop.]]></description>
+    <author><![CDATA[La Pieuvre Technologique]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+    <limited_countries></limited_countries>
+</module>
