@@ -161,15 +161,6 @@ class PayplusPaymentModuleFrontController extends ModuleFrontController
             );
         }
 
-        $sql = 'UPDATE `'._DB_PREFIX_.'orders` WHERE `id_cart` = '.$order_cart_id;
-        $orders = Db::getInstance()->executeS($sql);
-        $currentOrder = 0;
-        if(count($orders)>0){
-            $currentOrder = $orders[0]["id_order"];
-        }
-
-        //"order_id" => $this->module->currentOrder,
-
         $payplus_args = array(
             "invoice" => array(
                 "items" => $payplus_items,
@@ -185,7 +176,6 @@ class PayplusPaymentModuleFrontController extends ModuleFrontController
                 "return_url" => $order_return_url
             ), "custom_data" => array(
                 "cart_id" => $order_cart_id,
-                "order_id" => $currentOrder,
                 "cart_secure_key" => $order_cart_secure_key,
                 "Taxes" => $order_total_tax_amount,
             )

@@ -78,7 +78,6 @@ class PayplusPaymentReturnController
 
                     // Check if cart is valid
                     $cart_id = $custom_data->cart_id;
-                    $order_id = $custom_data->order_id;
                     $cart = new Cart((int)$cart_id);
                     if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 ||
                         $cart->id_address_invoice == 0 || !$this->module->active)
@@ -88,9 +87,6 @@ class PayplusPaymentReturnController
                     $customer = new Customer($cart->id_customer);
                     if (!Validate::isLoadedObject($customer))
                         die('Invalid customer');
-
-                    $currency = new Currency((int)$cart->id_currency);
-                    $total_paid = $response_decoded->invoice->total_amount;
 
                     if ($status == "completed") {
                         $order_id = (int)Order::getOrderByCartId($cart_id);
